@@ -33,7 +33,7 @@ app.post('/products', (req, res) => {
   }
 
   if (products.some(p => p.id === id)) {
-    return res.status(400).json({ error: 'ID ya existe' });
+    return res.status(400).json({ error: '400 Bad Request' });
   }
 
   const newProduct = { id, name, price };
